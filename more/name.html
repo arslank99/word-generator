@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Navbar section start-->
+    <section id="Navbar" class="bg-navbar">
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg bg-navbar">
+                    <div class="container-fluid">
+                        <a class="navbar-brand text-white" href="../index.html">
+                            Random Word Generator
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">
+                                        Word
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        Noun
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-disabled="true">
+                                        Verb
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-disabled="true" href="./more.html">
+                                        More...
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </section><!-- Navbar section end-->
+
+
+    <!-- content of tongue page -->
+    <div class="tongue py-5">
+        <div class="container">
+            <h3>Random Name Generator</h3>
+            <div class="d-flex align-items-center gap-3">
+                <div class="row">
+                  <form>
+                     <label for="">What Name : </label>
+                       <div class="form-group">
+                           <div class="row">
+                            <div class="col">
+                                <input type="radio" id="RandomName">
+                                <label for="">Generate Random Name : </label>
+                                <select name="category" id="category">
+                                    <option value="real">Real Names</option>
+                                    <option value="fantasy">Fantasy Names</option>
+                                    <option value="place">Fantasy Places</option>
+                                    <option value="pop-culture">Pop Culture</option>
+                                </select>
+                                from
+                                <select name="countries" id="countries">
+                                    <option value="any">AnyWhere</option>
+                                    <option value="austria">Austria</option>
+                                    <option value="canada">Canada</option>
+                                    <option value="china">China</option>
+                                    <option value="england">England</option>
+                                    <option value="germany">Germany</option>
+                                    <option value="greece">Greece</option>
+                                    <option value="italy">Italy</option>
+                                    <option value="japan">Japan</option>
+                                    <option value="malaysia">Malaysia</option>
+                                    <option value="mexico">Mexico</option>
+                                    <option value="netherlands">Netherlands</option>
+                                    <option value="poland">Poland</option>
+                                    <option value="portugal">Portugal</option>
+                                    <option value="russia">Russia</option>
+                                    <option value="spain">Spain</option>
+                                    <option value="thailand">Thailand</option>
+                                    <option value="turkey">Turkey</option>
+                                    <option value="united-states">United States</option>
+                                </select>
+                            </div>
+                           </div>
+                       </div>
+                       <div class="form-group">
+                          <div class="row">
+                             <div class="col">
+                                <label for="">pick a random name from this input : </label>
+                                <input type="text" id="pickRandom" class="form-control my-2">
+                             </div>
+                          </div>
+                       </div>
+                       <div class="form-group">
+                        <label for="">Gender : </label>
+                            <div style="padding-left: 10px; margin-top:0; padding-top:0">
+                                <input type="radio" id="male" class="name_type" name="name_type">
+                                <label for="male">Male</label>
+                                <input type="radio" id="female" class="name_type" name="name_type" style="margin-left:5px">
+                                <label for="female">Female</label>
+                                <input type="radio" checked="" id="male_and_female" class="name_type" name="name_type" style="margin-left:5px">
+                                <label for="male_and_female">Both</label>
+                                <input type="hidden" checked="checked" id="first_name_and_surname" class="name_building" name="name_building">
+                            </div>
+                       </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="">How Many Names : </label>
+                                    <input id="qty" min="1" max="50" type="number" name="qty" value="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col">
+                                  <input type="submit" id="submitBtn" class="btn btn-primary" value="Generate Random Name">
+                                  <input type="button" class="btn btn-danger" value="Reest option">
+                                </div>
+                            </div>
+                        </div>
+                  </form>
+                    <div class="d-flex align-items-center gap-3">
+                        <div id="generatedNames"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Social media icons -->
+                    <div class="page-content page-container" id="page-content">
+                        <div class="row container d-flex justify-content-start">
+                            <div class="col-md-6 grid-margin stretch-card">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">social media icons</h4>
+                                        <p class="card-description">social media icons buttons footer</p>
+                                        <div class="template-demo">
+                                            <button type="button" class="btn btn-social-icon btn-outline-facebook"><i
+                                                    class="fa fa-facebook"></i></button>
+                                            <button type="button" class="btn btn-social-icon btn-outline-youtube"><i
+                                                    class="fa fa-youtube"></i></button>
+                                            <button type="button" class="btn btn-social-icon btn-outline-twitter"><i
+                                                    class="fa fa-twitter"></i></button>
+                                            <button type="button" class="btn btn-social-icon btn-outline-dribbble"><i
+                                                    class="fa fa-dribbble"></i></button>
+                                            <button type="button" class="btn btn-social-icon btn-outline-linkedin"><i
+                                                    class="fa fa-linkedin"></i></button>
+                                            <button type="button" class="btn btn-social-icon btn-outline-instagram"><i
+                                                    class="fa fa-instagram"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Social media icons -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- content of tongue page -->
+
+    <!-- simple content dummy-->
+    <div class="container" id="content-tongue">
+        <div class="row">
+            <div class="col-md-6">
+                <p>Playing Truth or Dare is a right of passage for anyone growing up. It's a game that's fun, exciting
+                    and a bit
+                    nerve-wracking at the same time. One of the most difficult parts of the game is coming up with good
+                    truth
+                    questions and good dare questions when playing. That's where the Truth or Dare Questions generator
+                    comes in. It
+                    contains over 1000 good Truth or Dare questions for 2024 so that the game will always be interesting
+                    without all
+                    the players having to spend time during the game trying to think of good questions to ask. The game
+                    of Truth or
+                    Dare is a timeless classic that can entertain for hours. Friendships can be forged in the silly and
+                    wild or
+                    dramatic and moving outcomes that come from the simple question "truth or dare?"</p>
+                <h2>How Do You Play Truth or Dare?</h2>
+                <p>Truth or Dare is a game played verbally with no equipment or cards necessary. A minimum of two people
+                    play the
+                    game wherein one person chooses to tell a truthful answer to a question set by another player or to
+                    perform a
+                    challenge usually of bizarre or difficult nature -- a dare. One gameplay option includes using a
+                    Truth or Dare
+                    generator that'll produce random questions for each player's turn. This ensures that all players
+                    have an equal
+                    chance of performing an embarrassing task or answering a difficult question. Another optional rule
+                    can be to
+                    allow players to skip a certain number of truths or dares after verbalization. This rule is valuable
+                    if the game
+                    is more casual so that a player doesn't have to do anything too far past their comfort zone. A more
+                    serious
+                    alternative is to only be allowed the choice between the given dare or truth. For example, if the
+                    player chooses
+                    dare and decides they don't want to do that dare then they must answer a truth provided by the same
+                    person even
+                    if they don't want to do that either.</p>
+                <h2>Dare Questions</h2>
+                <p>Playing Truth or Dare can be a great way to have a good time at a gathering. It can be fun to do
+                    silly
+                    things you might never have the courage to do without a little push from someone else. It can also
+                    be a
+                    blast to watch your friends do some crazy things or to come up with the wild dares you want to see
+                    your
+                    friends do. A good dare should be something that gets the person a bit out of their comfort zone but
+                    not
+                    so bad that the person refuses to do it. It can be a tricky balance coming up with these ideas on
+                    your
+                    own on the fly and that's where a Truth or Dare questions generator can provide good dares for Truth
+                    or
+                    Dare games. When coming up with dares on your own, remember to always keep dares safe and never do
+                    anything that could hurt someone or upset someone's feelings.</p>
+                <h2>Truth Questions</h2>
+                <p>The truth portion of this game at parties can be a fun time too. Maybe it's time to see which teacher
+                    your classmates like the most or who believes in the wildest conspiracy theory. Asking who someone
+                    likes
+                    can be fun at a party but if you want to keep the topic away from romance, there are many other
+                    truth
+                    questions that can be asked. For example, you can ask instead which movie star they think is the
+                    most
+                    attractive. Again, coming up with good truth questions for Truth or Dare can be difficult during the
+                    game and that's where using a Truth or Dare generator can be quite helpful. It's also important to
+                    not
+                    forget that certain truths can be hurtful so be careful not to ask people something that could be
+                    derisive towards someone you know.</p>
+                <h2>Truth or Dare Game</h2>
+                <p>At the end of the day, Truth or Dare is a fun game that can be played in a lot of settings with a lot
+                    of
+                    different groups. It can be a fun way to learn more about your friends or a new companion. This game
+                    can
+                    also be a great way to be goofy without feeling too self-conscious. Just remember to always play
+                    nicely
+                    and never intentionally try to offend anyone.</p>
+                <p>If you found this tool useful for your game of Truth or Dare, we'd love to hear about it. We'd also
+                    be
+                    interested to hear from you if you have truth questions or dare questions that you believe are
+                    particularly good that we can add to this generator. We're always looking for great new questions to
+                    add
+                    to our database that everyone would find fun and entertaining, so please contact us if you have ones
+                    you
+                    particularly like when playing the game.</p>
+            </div>
+
+            <div class="col-md-6">
+                <h2>Other Random Generators</h2>
+                <p>Here you can find all the other Random Generators:</p>
+                <ul>
+                    <li>
+                        <a href="">Random Word Generator</a>
+                    </li>
+                    <li>
+                        <a href="">Random Noun Generator</a>
+                    </li>
+                    <li>
+                        <a href="">Random Synonym Generator</a>
+                    </li>
+                    <li>
+                        <a href="">Random Verb Generator</a>
+                    </li>
+                    <li>
+                        <a href="">Random Name Generator</a>
+                    </li>
+                    <li>
+                        <a href="">Random Adjective Generator</a>
+                    </li>
+                    <li>
+                        <a href="">Random Sentence Generator</a>
+                    </li>
+                    <li>
+                        <a href="">Random Phrase Generator</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <a href="">Random Paragraph Generator</a>
+                    </li>
+                    <li>
+                        <a href="">Weird Words</a>
+                    </li>
+                    <li>
+                        <a href="">Fake Words</a>
+                    </li>
+                    <li>
+                        <a href="">Random Letter Generator</a>
+                    </li>
+                    <li>
+                        <a href="">Random Number Generator</a>
+                    </li>
+                    <li>
+                        <a href="">Cursive Letters</a>
+                    </li>
+                    <li>
+                        <a href="">Random Password Generator</a>
+                    </li>
+                    <li>
+                        <a href="">Random Bible Verses</a>
+                    </li>
+                    <li>
+                        <a href="">Random Pictures</a>
+                    </li>
+                    <li>
+                        <a href="">Wedding Hashtags Generator</a>
+                    </li>
+                    <li><a href="">Random List</a>
+                    </li>
+                    <li>
+                        <a href="">Dinner Ideas Generator</a>
+                    </li>
+                    <li>
+                        <a href="">Breakfast Ideas</a>
+                    </li>
+                    <li>
+                        <a href="">Yes or No Oracle</a>
+                    </li>
+                    <li>
+                        <a href="">Pictionary Generator</a>
+                    </li>
+                    <li>
+                        <a href="">Motivational Quotes</a>
+                    </li>
+                    <li>
+                        <a href="">Random Questions</a>
+                    </li>
+                    <li>
+                        <a href="">Random Facts</a>
+                    </li>
+                    <li>
+                        <a href="">Vocabulary Words</a>
+                    </li>
+                    <li><a href="">Writing Prompts</a>
+                    </li>
+                    <li>
+                        <a href="">Coin Flip</a>
+                    </li>
+                    <li>
+                        <a href="">Dice Roll</a>
+                    </li>
+                    <li>
+                        <a href="">Never Have I Ever Questions</a>
+                    </li>
+                    <li>
+                        <a href="">Would You Rather Questions</a>
+                    </li>
+                    <li>
+                        <a href="">Truth or Dare Questions</a>
+                    </li>
+                    <li>
+                        <a href="">Decision Maker</a>
+                    </li>
+                    <li>
+                        <a href="">Charades</a>
+                    </li>
+                    <li>
+                        <a href="">Hangman Words</a>
+                    </li>
+                    <li>
+                        <a href="">Random Color Generator</a>
+                    </li>
+                    <li>
+                        <a href="">Random Things to Draw</a>
+                        <span class="label label-success">New</span>
+                    </li>
+                    <li>
+                        <a href="">Tongue Twisters</a>
+                        <span class="label label-success">New</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <!-- simple content dummy-->
+
+    <!-- footer section start -->
+    <footer id="footer">
+        <section class="footer  text-white footer-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mt-5">
+                        <div class="heading">
+                            <h4>Contact Us</h4>
+                            <strong>Email : </strong>
+                            <a href="">Info@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4  mt-5">
+                        <div class="heading d-flex flex-column gap-3">
+                            <h4>Other Projects</h4>
+                            <a href="">Cursive Letters</a>
+                            <a href="">Random List Generator</a>
+                            <a href="">Bible Verse Generator</a>
+                            <a href="">Random Picture Generator</a>
+                            <a href="">Alphabetize Any List</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4  mt-5">
+                        <div class="heading d-flex flex-column gap-3">
+                            <h4>About Us</h4>
+                            <p>
+                                We created this website to generate random words and more.
+                            </p>
+                            <a href="">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer><!-- footer section end -->
+
+    <!-- Include jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="../js/bootstrap.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="../js/style.js"></script>
+    <!-- <script>
+        $(document).ready(function () {
+            let NamesData; // Variable to store Truth or Dare questions
+            // Ajax request to get data from JSON file
+            $.ajax({
+                url: "/js/names.json",
+                type: "GET",
+                success: function (data) {
+                     NamesData = data.surname;
+                     console.log(NamesData);
+                }
+            });
+
+            // Handle button click event
+            $("#submitBtn").on("click", function (e) {
+                e.preventDefault();
+                console.log("clicked");
+            }); 
+        });
+    </script> -->
+<script>
+    $(document).ready(function () {
+        let NamesData;
+
+        // Ajax request to get data from JSON file
+        $.ajax({
+            url: "/js/names.json",
+            type: "GET",
+            success: function (data) {
+                NamesData = data.surname;
+                console.log(NamesData);
+
+                // Call the function now that NamesData is available
+                generateRandomName();
+            },
+            
+            error: function (xhr, status, error) {
+                console.error("Failed to retrieve data from the JSON file.", status, error);
+            }
+        });
+
+        // Handle form submission
+        $("#submitBtn").on("click", function (e) {
+            e.preventDefault();
+            // Call the function now that NamesData is available
+            generateRandomName();
+            console.log("Submit button clicked!");
+        });
+
+        function generateRandomName() {
+            // Get selected options
+            const category = $("#category").val() ? $("#category").val().toLowerCase() : '';
+            const countries = $("#countries").val() ? $("#countries").val().toLowerCase() : '';
+            const nameType = $("input[name='name_type']:checked").val();
+            const qty = $("#qty").val();
+
+            const filteredNames = NamesData.filter(name => {
+                const nameValue = name.name.value.toLowerCase();
+                return (
+                    (!category || nameValue.includes(category)) &&
+                    (!countries || nameValue.includes(countries))
+                );
+            });
+
+            console.log(filteredNames);
+
+            // Check if there are names to filter
+            if (filteredNames.length === 0) {
+                console.warn("No names match the specified criteria.");
+                return;
+            }
+
+            // Randomly select names
+            const randomNames = [];
+            for (let i = 0; i < qty; i++) {
+                const randomIndex = Math.floor(Math.random() * filteredNames.length);
+                randomNames.push(filteredNames[randomIndex].name.value);
+            }
+
+
+            console.log(randomNames);
+
+           const randomNamesString = randomNames.join(", ");
+            $("#generatedNames").html(randomNamesString);
+        }
+
+
+    });
+</script>
+
+
+
+
+
+</body>
+</html>

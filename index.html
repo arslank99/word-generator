@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link href="./css/style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- Navbar section start-->
+<section id="Navbar" class="bg-navbar">
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg bg-navbar">
+                    <div class="container-fluid">
+                        <a class="navbar-brand text-white"  href="index.html">
+                            Random Word Generator
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">
+                                        Word
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        Noun
+                                    </a>
+                                </li>
+    
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-disabled="true">
+                                        Verb
+                                    </a>
+                                </li>
+    
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-disabled="true" href="./more/more.html">
+                                        More...
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+</section><!-- Navbar section end-->
+
+<!-- hero section start  -->
+<section class="hero py-5">
+    <div class="container">
+        <div class="row paddings BreakPoint">
+            <div class="col-md-6">
+                <h3 class="headings">Random Word Generator</h3>
+                <div class="card bg-secondary text-white p-3 shadow">
+                    <form method="get">
+                        <div class="row">
+                            <div class="col d-flex">
+                                <label for="">Number of Word :</label>
+                                <input type="number" name="NumberOfWord" class="form-control w-25 ms-3" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col d-flex">
+                                <label for="">Word type : </label>
+                                <select name="WordType" id="" class="form-control w-25 ms-3">
+                                    <option value="">-- Select --</option>
+                                    <option value="all">All</option>
+                                    <option value="nouns">Nouns</option>
+                                    <option value="verbs">Verbs</option>
+                                    <option value="adjective">Adjective</option>
+                                    <option value="extended">Extended</option>
+                                    <option value="non-english">Non-English</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col d-flex align-items-center">
+                                <label for="">First Letter :</label>
+                                <input type="text" name="FirstLetter" class="form-control w-25 ms-3" />
+                                <label for="" class="ms-2">
+                                    Last Letter :
+                                </label>
+                                <input type="text" name="LastLetter" class="form-control w-25 ms-3" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="">Word size by : </label>
+                            <div class="col my-2 d-flex gap-2">
+                                <label for="">syllables</label>
+                                <input type="radio" name="syllables" />
+                                <label for="">letters</label>
+                                <input type="radio" name="letters" />
+                            </div>
+                            <div class="d-flex gap-2">
+                                <select class="form-control w-25" name="count">
+                                    <option value="equal">equals</option>
+                                    <option value="lessThan">less than</option>
+                                    <option value="greaterThan">greater than</option>
+                                </select>
+                                <input type="number" class="form-control w-25" name="sizeValue" />
+                            </div>
+                        </div>
+                        <div class="form-group d-flex gap-2">
+                            <button class="btn btn-danger" onclick="resetForm()" >Reset Option</button>
+                            <input type="button" onclick="generateRandomWord()" value="Generate Random Word" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
+                <p class="mt-3">
+                    Please <strong>Like & Share </strong> to keep our generator
+                    available
+                </p>
+            </div>
+            
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <div class="d-flex align-items-center gap-3">
+                    <h1>Reverse</h1>
+                    <span class="myicon">
+                       <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Social media icons -->
+                <div class="page-content page-container" id="page-content">
+                        <div class="row container d-flex justify-content-start">
+                            <div class="col-md-6 grid-margin stretch-card">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">social media icons</h4>
+                                        <p class="card-description">social media icons buttons footer</p>
+                                        <div class="template-demo">
+                                            <button type="button" class="btn btn-social-icon btn-outline-facebook"><i class="fa fa-facebook"></i></button>
+                                            <button type="button" class="btn btn-social-icon btn-outline-youtube"><i class="fa fa-youtube"></i></button>
+                                            <button type="button" class="btn btn-social-icon btn-outline-twitter"><i class="fa fa-twitter"></i></button>
+                                            <button type="button" class="btn btn-social-icon btn-outline-dribbble"><i class="fa fa-dribbble"></i></button>
+                                            <button type="button" class="btn btn-social-icon btn-outline-linkedin"><i class="fa fa-linkedin"></i></button>
+                                            <button type="button" class="btn btn-social-icon btn-outline-instagram"><i class="fa fa-instagram"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <!-- Social media icons -->
+            </div>
+        </div>
+    </div>
+</section><!-- hero section end  -->
+
+<!-- content section start -->
+<section class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>
+                    Welcome to the website. If you're here, you're likely looking to
+                    find random words. Random Word Generator is the perfect tool to
+                    help you do this. While this tool isn't a word creator, it is a
+                    word generator that will generate random words for a variety of
+                    activities or uses. Even better, it allows you to adjust the
+                    parameters of the random words to best fit your needs. The first
+                    option the tool allows you to adjust is the number of random
+                    words to be generated. You can choose as many or as few as you'd
+                    like. You also have the option of choosing words that only begin
+                    with a certain letter, only end with a certain letter or only
+                    begin and end with certain letters. If you leave these blank,
+                    the randomized words that appear will be from the complete list.
+                    Another option you have is choosing the number of syllables of
+                    the words or the word length of the randomized words. There are
+                    also ways to further refine these by choosing the "less than" or
+                    "greater than" options for both syllables and word length.
+                    Again, if you leave the space blank, the complete list of
+                    randomized words will be used. You have the option of choosing
+                    the types of words you want to be displayed using the "Word
+                    Type" dropdown. The default is "All" which is a curated list of
+                    thousands of the more common English words. You can also opt to
+                    only display nouns, verbs, or adjectives from this curated list.
+                    If you want to choose from all the words out there, you can
+                    choose "Extended" which is a list that includes over half a
+                    million different English words. If you're interested in random
+                    words in languages other than English, you can choose the "Non
+                    English" word type. Doing so will give you the option to
+                    generate words in ten different languages other than English.
+                    This includes Spanish words, Hindi words, Arabic words, German
+                    words, Russian words, Chinese words, Japanese words, Korean
+                    words. Latin words, or Italian words. You simply need to choose
+                    the language and then words from that language will randomly
+                    appear with each refresh of the page. Once you have input all of
+                    your specifications, all you have to do is to press the Generate
+                    Random Words button, and a list of random words will appear.
+                    Below are some of the common ways people use this tool.
+                </p>
+                <h1>Games</h1>
+                <p>
+                    This tool can be useful for games like Pictionary or MadLibs.
+                    Since the words are random, this helps to keep a game like
+                    Pictionary fair for all those playing. For a game like MadLibs,
+                    it can help kids improve their vocabulary by generating words
+                    they may not have ever considered to fill in the blank spaces.
+                    The tool has the potential to help with any word game that
+                    doesn't require a specific word.
+                </p>
+                <h1>Creative Writing</h1>
+                <p>
+                    For those who write, this tool can be an excellent device to aid
+                    in the creative writing process. By using the tool to create 5
+                    random words, a writer could then attempt to use all of them in
+                    a single paragraph. Longer random word lists could be
+                    incorporated into a short story. Since the writer doesn't know
+                    which words will appear, creativity must be used to successfully
+                    incorporate all the words. To make the challenge even more
+                    difficult, the writer could try to use the words in the exact
+                    order they were generated. In this way, writers can challenge
+                    their creativity to push their writing skills.
+                </p>
+                <h1>Spelling and Vocabulary</h1>
+                <p>
+                    This tool can be an excellent way to improve vocabulary or
+                    practice for spelling bees. If an unfamiliar word appears,
+                    looking up the meaning will help students increase the number of
+                    words they know. Working with a partner, students can test each
+                    other on the spelling for the randomized words generated.
+                </p>
+            </div>
+            <div class="col-md-6 d-flex align-items-start flex-column">
+                <h2>Other Random Generators</h2>
+                <p>Here you can find all the other Random Generators:</p>
+                <ul>
+                    <li>
+                        <a href="#">Random Word Generator</a>
+                    </li>
+                    <li>
+                        <a href="#">Random Noun Generator</a>
+                    </li>
+                    <li>
+                        <a href="#">Random Synonym Generator</a>
+                    </li>
+                    <li>
+                        <a href="#">Random Verb Generator</a>
+                    </li>
+                    <li>
+                        <a href="#">Random Word Generator</a>
+                    </li>
+                    <li>
+                        <a href="#">Random Noun Generator</a>
+                    </li>
+                    <li>
+                        <a href="#">Random Synonym Generator</a>
+                    </li>
+                    <li>
+                        <a href="#">Random Verb Generator</a>
+                    </li>
+                    <li>
+                        <a href="#">Random Word Generator</a>
+                    </li>
+                    <li>
+                        <a href="#">Random Noun Generator</a>
+                    </li>
+                    <li>
+                        <a href="#">Random Synonym Generator</a>
+                    </li>
+                    <li>
+                        <a href="#">Random Verb Generator</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section><!-- content section end-->
+
+<!-- footer section start -->
+<footer id="footer">
+    <section class="footer  text-white footer-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mt-5">
+                    <div class="heading">
+                        <h4>Contact Us</h4>
+                        <strong>Email : </strong>
+                        <a href="">Info@gmail.com</a>
+                    </div>
+                </div>
+                <div class="col-md-4  mt-5">
+                    <div class="heading d-flex flex-column gap-3">
+                        <h4>Other Projects</h4>
+                        <a href="">Cursive Letters</a>
+                        <a href="">Random List Generator</a>
+                        <a href="">Bible Verse Generator</a>
+                        <a href="">Random Picture Generator</a>
+                        <a href="">Alphabetize Any List</a>
+                    </div>
+                </div>
+                <div class="col-md-4  mt-5">
+                    <div class="heading d-flex flex-column gap-3">
+                        <h4>About Us</h4>
+                        <p>
+                            We created this website to generate random words and more.
+                        </p>
+                        <a href="">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</footer><!-- footer section end -->
+
+    <!-- Latest compiled JavaScript -->
+    <script src="./js/bootstrap.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="./js/style.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+     "data":[
+        {"image_url": "../img/coin/coin1.png"},
+        {"image_url": "../img/coin/coin2.png"},
+        {"image_url": "../img/coin/coin3.png"},
+        {"image_url": "../img/coin/coin4.png"},
+        {"image_url": "../img/coin/coin5.png"},
+        {"image_url": "../img/coin/coin6.png"}
+    ]
+}
